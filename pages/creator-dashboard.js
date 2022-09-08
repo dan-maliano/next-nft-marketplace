@@ -4,14 +4,13 @@ import axios from 'axios'
 import Web3Modal from "web3modal"
 import Image from 'next/image'
 
-import {
-  nftmarketaddress, nftaddress
-} from '../config'
+import { nftmarketaddress, nftaddress } from '../config'
 
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 
 export default function CreatorDashboard() {
+
   const [nfts, setNfts] = useState([])
   const [sold, setSold] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
@@ -21,7 +20,7 @@ export default function CreatorDashboard() {
   async function loadNFTs() {
     const web3Modal = new Web3Modal(
     //     {
-    //   network: "mainnet",
+    //   network: "mumbai",
     //   cacheProvider: true,
     // }
     )

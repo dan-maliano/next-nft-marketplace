@@ -3,8 +3,22 @@ import {ethers } from 'ethers'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
+import NextCors from 'nextjs-cors';
 
-const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
+
+const projectId = '2ESHSL6lvODxctOI9VUYqepqg9u';
+const projectSecret = '77eb77e00df3cfe5e60b32cffb868d7d';
+const auth =
+    'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+
+const client = ipfsHttpClient({
+    host: 'ipfs.infura.io/api/v0',
+    port: 5001,
+    protocol: 'https',
+    headers: {
+        authorization: auth,
+    },
+});
 
 import {
     nftaddress,nftmarketaddress

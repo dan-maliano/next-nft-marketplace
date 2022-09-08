@@ -1,7 +1,7 @@
-export const nftaddress = "0x0c3a5563a4aE4c008593eaDeC24125475e3aa37b";
-export const nftmarketaddress = "0x3d63CC6672Ff08479EadC4606EFD22aeDa592C9E";
-//EDIT !!!
-let x = 1;
+// export const nftaddress = process.env.nftaddress;
+// export const nftmarketaddress = process.env.nftmarketaddress;
+// //EDIT !!!
+// let x = 1;
 //change the above everytime you redeploy your contracts
 
 //command for deploying your contracts on hardhat:
@@ -9,3 +9,12 @@ let x = 1;
 
 //command for starting or restarting your server:
 //npx hardhat node
+// import secret from "./secret.json";
+import { privateKey as _privateKey, projectId as _projectId, nftaddress as _nftaddress, nftmarketaddress as _nftmarketaddress } from "./secret.json";
+
+module.exports = {
+    privateKey: _privateKey,
+    projectId: _projectId,
+    nftaddress: _nftaddress,
+    nftmarketaddress: _nftmarketaddress
+};

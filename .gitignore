@@ -35,7 +35,7 @@ yarn-error.log*
 
 node_modules
 .env
-.secret
+secret.json
 coverage
 coverage.json
 typechain
