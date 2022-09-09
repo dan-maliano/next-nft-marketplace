@@ -39,6 +39,7 @@ secret.json
 coverage
 coverage.json
 typechain
+packege-lock.json
 
 #Hardhat files
 cache
