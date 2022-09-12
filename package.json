@@ -1,5 +1,6 @@
 {
   "name": "opensea-clone",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
