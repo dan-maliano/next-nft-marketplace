@@ -1,6 +1,7 @@
 {
-  "name": "opensea-clone",
+  "name": "next-marketplace",
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
